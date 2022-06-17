@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "014e5bfd-5c69-4b95-9101-7d5a5867e2be",
+		"name": "SpringBoot Java Lab",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "All pokemons",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/pokemons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"pokemons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pokemon by number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/pokemons/25",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"pokemons",
+						"25"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pokemon by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/pokemons/name/pikachu",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"pokemons",
+						"name",
+						"pikachu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pokemon by evolution",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"pikachu\",\r\n    \"evolution\": \"raichu\",\r\n    \"level\": 10,\r\n    \"wild\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/pokemons/evolution/raichu",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"pokemons",
+						"evolution",
+						"raichu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pokemon",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"number\": 25, \r\n    \"name\": \"pikachu\",\r\n    \"evolution\": \"raichu\",\r\n    \"type\": \"ELECTRIC\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/pokemons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"pokemons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pokemon",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"pikachu\",\r\n    \"evolution\": \"raichu\",\r\n    \"level\": 10,\r\n    \"wild\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/pokemons/25",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"pokemons",
+						"25"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
